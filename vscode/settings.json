@@ -1,0 +1,16 @@
+{
+    // Quebra de linha
+    "editor.wordWrap": "on", 
+    // Auto save
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    
+    /* em linha
+    em "debug.toolBarLocation":
+    
+    comment
+    lorem
+    
+    */
+    
+}
