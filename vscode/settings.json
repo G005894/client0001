@@ -4,6 +4,11 @@
     // Auto save
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
+    "editor.formatOnSave": true,
+    "editor.fontSize": 15,
+    
+    
+
     
     /* em linha
     em "debug.toolBarLocation":
