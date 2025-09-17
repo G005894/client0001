@@ -5,12 +5,12 @@
     box-sizing: border-box;
 }
 body {
-    background:#9082FA
+    background:#c2d3c2
 }
 header {
     display: flex; /* flexbox */
-    justify-content: space-between; /* espaçamento das div's */
-    align-items: center; /* alinhamento vertical */
+    justify-content:space-between ; /* espaçamento das div's , ou seja, alinhamento horizontal, eixo "x" */
+    align-items: center; /* alinhamento vertical , como se fosse o eixo "y" */
     width: 100%;
     padding: 0.5rem 1rem; /* .5 cima e baixo; 1 direita e esquerda */
     /* padding-top: ;
@@ -18,6 +18,10 @@ header {
     padding-bottom: ;
     padding-left: ; */
     /* margin: 5rem; */
-    border-bottom: 1px solid black;
-    
+    border-bottom: 1px solid black; 
+    position: fixed;  /* cria um menu fixo */
+}
+
+h1 {
+    padding-top: 1200px;
 }
