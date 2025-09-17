@@ -1,0 +1,23 @@
+/* Reset CSS */
+* {
+    margin: 0;/* margem externa */
+    padding: 0; /* margem entre os elementos */
+    box-sizing: border-box;
+}
+body {
+    background:#9082FA
+}
+header {
+    display: flex; /* flexbox */
+    justify-content: space-between; /* espaçamento das div's */
+    align-items: center; /* alinhamento vertical */
+    width: 100%;
+    padding: 0.5rem 1rem; /* .5 cima e baixo; 1 direita e esquerda */
+    /* padding-top: ;
+    padding-right: ;
+    padding-bottom: ;
+    padding-left: ; */
+    /* margin: 5rem; */
+    border-bottom: 1px solid black;
+    
+}
