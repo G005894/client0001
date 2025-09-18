@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 body {
-    background:#c2d3c2
+    background:#FDCE34
 }
 header {
     display: flex; /* flexbox */
-    justify-content:space-between ; /* espaçamento das div's , ou seja, alinhamento horizontal, eixo "x" */
+    justify-content:space-between; /* espaçamento das div's , ou seja, alinhamento horizontal, eixo "x" */
     align-items: center; /* alinhamento vertical , como se fosse o eixo "y" */
     width: 100%;
     padding: 0.5rem 1rem; /* .5 cima e baixo; 1 direita e esquerda */
@@ -24,4 +24,39 @@ header {
 
 h1 {
     padding-top: 1200px;
+}
+
+/* nav */
+.menu-desktop {
+    display: none;
+}
+
+/* ul */
+.menu {
+    /* background: red; */
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+/* a */
+.sublinhado {
+    text-decoration: none;
+}
+
+/* span */
+.texto-menu {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+/* Resposividade */ 
+/* A partir de 768px o dispositivo deve usar esta resolução */
+@media (min-width: 768px) {
+    .menu-desktop{
+        display: flex;
+    }
+    
 }
