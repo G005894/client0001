@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,11 +60,11 @@
         </div>
 
         <!-- Icone trocar tema -->
-        <div>
-            <i class="bi bi-sun"></i>
+        <div class="header-toggle">
+            <i class="bi bi-sun" id="toggleTheme"></i>
 
             <!-- botão lista mobile **  só vai aparecer na tela mobile-->
-            <button>
+            <button id="menuHamburger" class="btn-menu-mobile">
                 <i class="bi bi-list"></i>
             </button>
 
@@ -72,7 +72,51 @@
 
     </header>
 
-    
+    <!-- Menu lista Mobile -->
+     <nav id="menuMobile" class="menu menu-mobile">
+        <ul class=""> <!-- lista não ordenada "cômoda"; duas classes atribuídas -->
+                <li class="lista-mobile">
+                    <a class="sublinhado" href="">
+                        <span class="texto-menu">
+                            Home 
+                        </span> 
+                    </a>
+                     
+                </li>
+                <li class="lista-mobile">
+                    <a class="sublinhado" href="">
+                        <span class="texto-menu">
+                            projetos
+                        </span> 
+                    </a>
+                     
+                </li>
+                <li class="lista-mobile">
+                    <a class="sublinhado" href="">
+                        <span class="texto-menu">
+                            Sobre
+                        </span> 
+                    </a>
+                     
+                </li>
+                <li class="lista-mobile">
+                    <a class="sublinhado" href="">
+                        <span class="texto-menu">
+                            ConTato
+                        </span> 
+                    </a>
+                     
+                </li><!-- lista -->
+
+            </ul>
+     </nav>
+
+
+
+
+    <!-- JS -->
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>
