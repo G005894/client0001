@@ -106,6 +106,10 @@
     --icon-theme: #f1c80f;
     --cor-titulo: #c4d8cf;
     --cor-texto: #962a2a;
+    --cor-icon-theme: rgb(87, 81, 81);
+    --hover-link: #dfdada;
+    --cor-texto-menu-link: #756d6d;
+
 }
 
 
@@ -118,6 +122,10 @@
     --icon-theme: #13102c;
     --cor-titulo: #00582f;
     --cor-texto: #1fb3b3;
+    --cor-icon-theme: #130f0f;
+    --hover-link: #e6e6e6;
+    --cor-texto-menu-link: #756d6d;
+
 }
 
 /* Aparencia/efeito barra rolagem */
@@ -170,13 +178,14 @@ header {
 /* a */
 .menu-link {
     text-decoration: none;
+
 }
 
 /* span */
 .texto-menu {
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--cor-menu-link);
+    color: var(--cor-texto-menu-link);
 }
 
 #toggleTheme {
@@ -212,7 +221,7 @@ header {
 /* Herança */
 .menu-link.active .texto-menu,
 .menu-link:hover .texto-menu {
-    color: red;
+    color: var(--cor-menu-link);
 }
 
 .btn-menu-mobile {
@@ -254,8 +263,8 @@ p {
 /* Reaproveitar para as seções */
 #home {
     padding: 3.5rem 1.0rem;
-    background: orange;
-
+    /* background: orange;
+ */
 }
 
 /* Flexbox da home */
@@ -270,6 +279,17 @@ p {
     flex-direction: column;
     gap: 1.2rem; /* Espaço entre h1 e paragrafo */
 }
+
+.menu-social i {
+    color: var(--cor-icon-theme);
+    font-size: 1.2rem;
+    
+}
+
+.menu-social i:hover {
+    color: var(--hover-link);
+}
+
 
 
 /* section {
