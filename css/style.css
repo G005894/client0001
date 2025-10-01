@@ -148,6 +148,7 @@ html {
 }
 body {
     background: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 header {
     background: var(--cor-fundo);
