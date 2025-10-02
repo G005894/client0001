@@ -267,6 +267,16 @@ h1 {
     /* letter-spacing: 5px; */
 }
 
+/* h2  */
+h2 {
+    text-align: center;
+    font-size: 2.0rem;
+    font-family: var(--fonte-subtitulo-h2);
+    /* font-weight: ;
+    letter-spacing: ; 
+    color: ; */
+
+}
 
 
 p {
@@ -274,7 +284,10 @@ p {
 }
 
 /* Reaproveitar para as seções */
-#home {
+#home,
+.projetos,
+.sobre,
+.contato {
     padding: 3.5rem 1.0rem;
     /* background: orange;
  */
@@ -284,6 +297,7 @@ p {
 #home {
     display: flex;
     flex-direction: column;
+    gap: 2rem;/* coloca "gap" entre todos os elementos da home*/
 
 }
 
@@ -303,7 +317,62 @@ p {
     color: var(--hover-link);
 }
 
+.descricao-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 6.25rem 1rem 2rem;
+    background: #5a5757;
+    margin-top: -7.5rem;
 
+}
+.video iframe {
+    aspect-ratio: 16/9;
+    /* width: 100%; */
+}
+.descricao-video h2 {
+    font-size: 2rem;
+    text-transform: normal;
+    letter-spacing: 2px;
+    font-family: var(--fonte-subtitulo-h2);
+    text-align: center;
+}
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.img-card {
+    width: 100%;/* para imagem nunca passar seu tamanho origial */
+    border-radius: 1rem 5rem;
+    box-shadow: 10px 10px 30px 5px #fafafad5;/* aceita valores negativos para posicionar o shadow */
+    /*         "X"  "Y"  "blur" spread */
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.card-list {
+    list-style: none;
+}
 
 /* section {
     padding-top: 150px;
@@ -315,9 +384,23 @@ footer {
 
 
 
-/* Resposividade */ 
+/* Responsividade */ 
+
+
+@media (max-width: 768px) {
+    #home {
+        padding-top: 6rem;
+    }
+}
+
+
 /* A partir de 768px o dispositivo deve volar a tela em flex*/
 @media (min-width: 768px) {
+    header {
+        padding: 1rem 6rem;/* 1rem para cima e para baixo e 6rem para direita e esquerda */
+    }
+    
+    
     .menu-desktop {
         display: flex;
     }
@@ -331,6 +414,21 @@ footer {
     .header-logo {
         min-width: 20%; /* centralização do logo */
     }
+    #home,
+    .projetos,
+    .sobre {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .descricao-video {
+        padding: 6.25rem 6rem 2rem 6rem;
+
+
+    }
     
 }
 
@@ -339,11 +437,21 @@ footer {
     h1 {
         font-size: 6rem;
     }
+    .projeto-card {
+        flex-direction: row; /* em telas grandes, os textos ficarão em linha com a imagem */
+    }
+    .img-card {
+        width: 55%;/* Em telas maiores de 992px, a imagem será limitada a 55% de largura, comtextos ao lado */
+    }
 }
 
 /* Telas 1400px */
 @media (min-width: 1400px) {
     h1 {
         font-size: 6.75rem;
+    }
+    .descricao-video h2 {
+        font-size: 4.5rem;
+        text-align: start;
     }
 }
