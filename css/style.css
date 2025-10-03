@@ -105,7 +105,7 @@
     --borda: #f5f5f5;
     --icon-theme: #f1c80f;
     --cor-titulo: #c4d8cf;
-    --cor-texto: #962a2a;
+    --cor-texto: #ddd2d2;
     --cor-icon-theme: rgb(87, 81, 81);
     --hover-link: #dfdada;
     --cor-texto-menu-link: #756d6d;
@@ -121,7 +121,7 @@
     --borda: #862222;
     --icon-theme: #13102c;
     --cor-titulo: #00582f;
-    --cor-texto: #1fb3b3;
+    --cor-texto: #042020;
     --cor-icon-theme: #130f0f;
     --hover-link: #e6e6e6;
     --cor-texto-menu-link: #756d6d;
@@ -267,7 +267,7 @@ h1 {
     /* letter-spacing: 5px; */
 }
 
-/* h2  */
+/* h2  */ /* Tudo o que está solto aqui serve para a visualização mobile */
 h2 {
     text-align: center;
     font-size: 2.0rem;
@@ -275,12 +275,19 @@ h2 {
     /* font-weight: ;
     letter-spacing: ; 
     color: ; */
-
 }
 
+/* h3 */
+h3 {
+    font-size: 1.55rem;
+    font-family: var(--fonte-subtitulo-h3);
+    text-transform: uppercase;
+}
 
-p {
-    color: var(--cor-texto);
+p,
+span,
+li {
+    font-size: 1.5rem; /* todos os paragrafos, span e lista ficaram com o mesmo tamanho de fonte */
 }
 
 /* Reaproveitar para as seções */
@@ -374,6 +381,26 @@ p {
     list-style: none;
 }
 
+/* h3 do projeto */
+.card-title {
+    color: #0303dd;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.card-list .card-item i {/* distancia as listas dos icones */
+    margin-right: 15px;
+}
+.card-list .card-item {
+    margin-bottom: 15px;
+}
+.card-list .card-item:hover i { /* efeito hover nos icones mesmo passando o mouse sobre as palavras das listas */
+    color: #962a2a;
+}
+
+.btn-primario i {
+    font-size: 1.2rem;
+}
+
 /* section {
     padding-top: 150px;
     color: white;
@@ -394,7 +421,7 @@ footer {
 }
 
 
-/* A partir de 768px o dispositivo deve volar a tela em flex*/
+/* A partir de 768px o dispositivo deve voltar a tela em flex*/
 @media (min-width: 768px) {
     header {
         padding: 1rem 6rem;/* 1rem para cima e para baixo e 6rem para direita e esquerda */
@@ -410,6 +437,9 @@ footer {
 
     h1 {
         font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
     }
     .header-logo {
         min-width: 20%; /* centralização do logo */
@@ -443,12 +473,32 @@ footer {
     .img-card {
         width: 55%;/* Em telas maiores de 992px, a imagem será limitada a 55% de largura, comtextos ao lado */
     }
+    .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+}
+
+/* Telas 1200px - serve para quase todos os tablets em lanscape */
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
 }
 
 /* Telas 1400px */
 @media (min-width: 1400px) {
     h1 {
-        font-size: 6.75rem;
+        font-size: 7rem;
+    }
+    h2 {
+        font-size: 5rem;
+    }
+    h3 {
+        font-size: 3.25rem;
     }
     .descricao-video h2 {
         font-size: 4.5rem;
