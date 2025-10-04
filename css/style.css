@@ -219,10 +219,13 @@ header {
     padding-top: 4rem;
     height: 100vh;/* viewport heigth */
     border-left: 1px solid var(--borda);
+    
+    
 }
 
-.menu-mobile.active { /* atributo (regra) que ven do JS */
+.menu-mobile.active { /* atributo (regra) que vem do JS */
     transform: translateX(0%);
+    
 }
 
 .menu-item {
@@ -242,7 +245,7 @@ header {
     border: none;
     color: var(--icon-theme);
     font-size: 1.2rem;
-    margin-left: 1rem; /* distancia o sol do menu hamburger*/
+    margin-left: 1rem; /* distancia entre o sol e menu hamburger*/
     /* align-items: center;
     justify-content: center;
     display: flex; */
@@ -401,6 +404,59 @@ li {
     font-size: 1.2rem;
 }
 
+/* Sobre */
+.sobre {
+    display:flex ; /* Os textos a partir de "formação" vão para linha */
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sobre-content1,
+.sobre-content2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-content1, .sobre-content2 {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .sobre-avatar {
+        width: 100%;
+        border-radius: 50rem;
+    }
+
+    .sobre-icones,
+    .sobre-skills {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .sobre-icones i,
+    .sobre-skills i {
+        font-size: 1.5rem;
+    }
+
+
+/* Accordion */
+.accordion-body {
+    display: none;
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180);
+}
+
+
 /* section {
     padding-top: 150px;
     color: white;
@@ -460,7 +516,11 @@ footer {
 
     }
     
+}.accordion-item.active .accordion-body {
+    display: flex;
 }
+
+
 
 /* Telas 992px */
 @media (min-width: 992px) {
@@ -477,6 +537,11 @@ footer {
         flex-direction: row-reverse;
         justify-content: center;
     }
+    
+
+
+
+
 }
 
 /* Telas 1200px - serve para quase todos os tablets em lanscape */
